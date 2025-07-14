@@ -1,6 +1,6 @@
 export const Header = (props) => {
   return (
-    <header>
+    <header id="home">
       <div className="header__content container">
         <div className="site-logo"></div>
 
@@ -18,3 +18,12 @@ export const Header = (props) => {
     </header>
   );
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navBtn = document.querySelector(".nav-btn");
+  const nav = document.querySelector(".rollout-nav");
+
+  navBtn.addEventListener("click", () => {
+    nav.classList.toggle("nav-closed");
+  });
+});

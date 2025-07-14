@@ -1,3 +1,5 @@
+import './index.css';
+
 export const Gallery = (props) => {
   return (
     <section id="gallery" className="gallery">

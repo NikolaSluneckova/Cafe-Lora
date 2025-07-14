@@ -1,3 +1,5 @@
+import './index.css';
+
 export const Contact = (props) => {
   return (
     <section id="contact">

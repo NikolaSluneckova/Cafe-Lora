@@ -1,3 +1,5 @@
+import './index.css';
+
 export const Banner = (props) => {
   return (<section className="banner">
         <div className="container">

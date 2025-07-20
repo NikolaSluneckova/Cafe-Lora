@@ -1,4 +1,4 @@
-/* Header 
+ Header 
 header {
   padding: 1rem 0 1rem 0;
   height: 5rem;
@@ -92,7 +92,7 @@ nav a:hover {
   }
 }
 
-/* Footer 
+ Footer 
 footer {
   padding: 2rem 0;
   background-color: #301a1a;
@@ -275,7 +275,7 @@ footer {
   }
 }
 
-/* Contact 
+ Contact 
 .contact {
   display: flex;
   flex-direction: column;

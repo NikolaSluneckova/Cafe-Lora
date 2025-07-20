@@ -14,7 +14,7 @@ console.log(drinks);
 
 document.querySelector('#root').innerHTML = render(
   <div className="page">
-    <Header />
+    <Header showMenu={true} />
     <main>
       <Banner />
       <Menu drinks={drinks} />
@@ -24,6 +24,11 @@ document.querySelector('#root').innerHTML = render(
     <Footer />
   </div>
 );
+
+document.querySelector('.nav-btn')?.addEventListener('click', () => {
+  document.querySelector('.rollout-nav')?.classList.toggle('nav-closed');
+});
+
 
 document.querySelectorAll('.drink form').forEach((form) => {
   form.addEventListener('submit', async (event) => {

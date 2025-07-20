@@ -1,31 +1,25 @@
 import './index.css';
 
-export const Header = (props) => {
+export const Header = ({ showMenu = true }) => {
   return (
     <header id="home">
       <div className="header__content container">
-        <div className="site-logo"></div>
+        <a href="/" className="site-logo">
+          <img src="/img/site-logo.png"/>
+        </a>
 
-        <div className="navigation">
-          <button className="nav-btn"></button>
-          <nav className="rollout-nav nav-closed">
-            <a href="#home">domů</a>
-            <a href="#menu">menu</a>
-            <a href="#gallery">galerie</a>
-            <a href="#contact">kontakt</a>
-          </nav>
-        </div>
-
+        {showMenu && (
+          <div className="navigation">
+            <button className="nav-btn"></button>
+            <nav className="rollout-nav nav-closed">
+              <a href="#home">domů</a>
+              <a href="#menu">menu</a>
+              <a href="#gallery">galerie</a>
+              <a href="#contact">kontakt</a>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-  const navBtn = document.querySelector(".nav-btn");
-  const nav = document.querySelector(".rollout-nav");
-
-  navBtn.addEventListener("click", () => {
-    nav.classList.toggle("nav-closed");
-  });
-});
